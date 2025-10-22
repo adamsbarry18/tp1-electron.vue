@@ -9,6 +9,7 @@
     "package": "electron-forge package",
     "make": "electron-forge make",
     "publish": "electron-forge publish",
+    "release:ci": "electron-forge publish --platform=all",
     "lint": "echo \"No linting configured\""
   },
   "keywords": [],
