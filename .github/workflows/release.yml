@@ -1,6 +1,8 @@
 name: Release app
 on:
-  workflow_dispatch:
+  push:
+    branches:
+      - main
 
 jobs:
   build:
@@ -28,8 +30,8 @@ jobs:
 
       - name: Publish to GitHub Releases (draft)
         env:
-          # Set this secret in the repository: GH_TOKEN (recommended) or use built-in GITHUB_TOKEN
-          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+          # Set this secret in the repository: secrets.GITHUB_TOKEN
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           # electron-forge publish will create a draft release by default if configured
           npm run publish
