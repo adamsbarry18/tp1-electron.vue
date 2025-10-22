@@ -1,6 +1,8 @@
 const { FusesPlugin } = require('@electron-forge/plugin-fuses');
 const { FuseV1Options, FuseVersion } = require('@electron/fuses');
 
+require('dotenv').config();
+
 module.exports = {
   packagerConfig: {
     asar: true,
@@ -29,8 +31,8 @@ module.exports = {
       name: '@electron-forge/publisher-github',
       config: {
         repository: {
-          owner: 'mabarry2018@gmail.com',
-          name: 'https://github.com/adamsbarry18/tp1-electron.vue',
+          owner: 'adamsbarry18',
+          name: 'tp1-electron.vue',
         },
         prerelease: false,
         draft: true,
