@@ -29,8 +29,8 @@ module.exports = {
       name: '@electron-forge/publisher-github',
       config: {
         repository: {
-          owner: 'mon-compte',
-          name: 'mon-repo',
+          owner: 'mabarry2018@gmail.com',
+          name: 'https://github.com/adamsbarry18/tp1-electron.vue',
         },
         prerelease: false,
         draft: true,
